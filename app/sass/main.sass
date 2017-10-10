@@ -53,7 +53,7 @@ li
     display: flex
     .nav_search_lupa
         background-color: #e2dee0
-        width: 74px
+        width: 50%
         height: 74px
         display: flex
         justify-content: center
@@ -65,7 +65,7 @@ li
                 color: #96a6a7
                 transition: .45s ease
     .nav_search_login
-        width: 141px
+        width: 100%
         height: 74px
         background-color: $red
         display: flex
@@ -82,3 +82,57 @@ li
                 transition: .45s ease
         a:hover
             text-decoration: none
+.header_bg
+    position: relative
+    img
+        background-size: cover
+        min-width: 100%
+        height: auto
+        z-index: 0
+.header_bg2
+    position: absolute
+    left: 0
+    top: 74px
+    width: 100%
+    img
+        background-size: cover
+        min-width: 100%
+        height: auto
+        z-index: 1
+        background-color: rgba(0,0,0,.66)
+.header_looking_text
+    position: absolute
+    z-index: 3
+    color: white
+    font-size: 1.875rem
+    top: 120px
+    left: 0
+    display: flex
+    justify-content: center
+    width: 100%
+    font-family: "gotham medium"
+.header_looking_form
+    position: absolute
+    z-index: 3
+    top: 180px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    align-items: center
+    font-family: "gotham medium"
+.header_looking_form_select
+    margin-top: 20px
+    width: 470px
+    .header_looking_form_select_city, .header_looking_form_select_what
+        width: 220px
+        height: 50px
+        border-radius: 50px
+        border: 1px solid rgba(102, 102, 102, .7)
+        padding-left: 25px
+        color: #fff
+        background-color: rgba(102, 102, 102, .35)
+.togglelist
+    position: absolute
+    li
+        display: none
