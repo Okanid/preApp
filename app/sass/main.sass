@@ -1,6 +1,8 @@
 @import fonts
 @import colors
 @import button
+@import jquery.fs.selecter
+@import precss
 
 *
     margin: 0
@@ -123,16 +125,40 @@ li
     font-family: "gotham medium"
 .header_looking_form_select
     margin-top: 20px
+    width: 482px
+    margin-left: 10px
+    .col-md-6
+        padding-right: 0
+    // .header_looking_form_select_city, .header_looking_form_select_what
+    //     width: 220px
+    //     height: 50px
+    //     border-radius: 50px
+    //     border: 1px solid rgba(102, 102, 102, .7)
+    //     padding-left: 25px
+    //     color: #fff
+    //     background-color: rgba(102, 102, 102, .35)
+    //     position: absolute
+.header_looking_form_text
     width: 470px
-    .header_looking_form_select_city, .header_looking_form_select_what
-        width: 220px
-        height: 50px
-        border-radius: 50px
-        border: 1px solid rgba(102, 102, 102, .7)
-        padding-left: 25px
+    height: 50px
+    border-radius: 50px
+    border: 1px solid rgba(102, 102, 102, .7)
+    padding-left: 25px
+    color: #fff
+    background-color: rgba(102, 102, 102, .35)
+    font-family: "gotham book"
+    //     position: absolute
+.sel1
+    position: relative
+.arow-down
+    .fa
         color: #fff
-        background-color: rgba(102, 102, 102, .35)
-.togglelist
-    position: absolute
-    li
-        display: none
+        position: absolute
+        top: 25px
+        right: 13px
+.header_looking_form_button
+    +prebutton
+    color: #fff
+    margin-top: 20px
+    text-transform: uppercase
+    font-family: "gotham medium"

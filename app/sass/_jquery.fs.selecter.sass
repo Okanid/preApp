@@ -1,0 +1,230 @@
+/*
+ * Selecter v3.2.3 - 2014-10-24
+ * A jQuery plugin for replacing default select elements. Part of the Formstone Library.
+ * http://formstone.it/selecter/
+ *
+ * Copyright 2014 Ben Plum; MIT Licensed
+
+.selecter
+  font-family: "gotham book"
+  position: relative
+  display: block
+  margin: 10px 0
+  z-index: 1
+  max-width: 280px
+  &:focus
+    box-shadow: none
+    outline: none
+    border-radius: 50px
+  -webkit-user-select: none !important
+  -moz-user-select: none !important
+  -ms-user-select: none !important
+  user-select: none !important
+  *
+    -webkit-user-select: none !important
+    -moz-user-select: none !important
+    -ms-user-select: none !important
+    user-select: none !important
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    &:before, &:after
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.selecter-element
+  width: 100%
+  height: 100%
+  position: absolute
+  left: 0
+  opacity: 0
+  z-index: -1
+  outline: none
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+  -webkit-tap-highlight-color: transparent
+  &:focus
+    outline: none
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+    -webkit-tap-highlight-color: transparent
+
+.no-opacity .selecter-element
+  left: -999999px
+
+.selecter-selected
+  position: relative
+  background: rgba(102, 102, 102, 0.35)
+  border: 1px solid rgba(102, 102, 102, 0.7)
+  color: #fff
+  cursor: pointer
+  display: block
+  font-size: 16px
+  margin: 0
+  overflow: hidden
+  padding: 10px 25px
+  text-overflow: clip
+  z-index: 2
+  border-radius: 50px
+  &:after
+    // height: 0
+    // width: 0
+    // position: absolute
+    // top: 0
+    // right: 15px
+    // bottom: 0
+    // border-left: 5px solid transparent
+    // border-right: 5px solid transparent
+    // border-top: 5px solid #000
+    // content: ''
+    // display: block
+    // margin: auto 0
+
+
+.no-touch
+  .selecter-selected:hover
+    color: #333333
+  .selecter.disabled .selecter-selected:hover
+    color: #cccccc
+
+.selecter-options
+  font-family: "gotham book"
+  width: 100%
+  max-height: 260px
+  top: 100%
+  left: 0
+  display: none
+  margin-top: 5px
+  position: absolute
+  padding: 0
+  z-index: 50
+  &.scroller
+    position: absolute
+
+.no-opacity .selecter-options
+  width: auto
+
+.selecter-group
+  border-bottom: 1px solid #cccccc
+  color: #999999
+  display: block
+  font-size: 11px
+  padding: 10px 25px
+  text-transform: uppercase
+
+.selecter-item
+  width: 100%
+  background: rgba(102, 102, 102, .9)
+  border: 1px solid rgba(102, 102, 102, .7)
+  border-radius: 50px
+  color: #fff
+  cursor: pointer
+  display: block
+  margin-top: 5px
+  overflow: hidden
+  padding: 10px 15px
+  text-decoration: none
+  text-overflow: ellipsis
+  &.placeholder
+    display: none
+  &.selected
+    background: #ccc
+  &.disabled
+    color: #999999
+    cursor: default
+  &:first-child
+    border-radius: 50px
+  &:last-child
+    border-bottom: 0
+    border-radius: 50px
+
+.no-touch .selecter-item
+  &:hover, &.selected:hover
+    color: #333333
+    background-color: #cccccc
+
+.selecter-item.disabled, .no-touch .selecter-item.disabled:hover
+  color: #cccccc
+  background-color: #ffffff
+
+.selecter
+  &.open
+    z-index: 3
+    .selecter-selected
+      z-index: 51
+      /*border-radius: 3px 3px 0 0;
+  &.cover
+    .selecter-options
+      /*border-width: 1px;
+      top: 0
+      /*border-radius: 3px;
+      .selecter-item.first
+        /*border-radius: 3px 3px 0 0;
+    &.open .selecter-selected
+      z-index: 49
+      /*border-radius: 3px 3px 0 0;
+  &.bottom
+    .selecter-options
+      top: auto
+      bottom: 100%
+      /*border-width: 1px 1px 0;
+    .selecter-item:last-child
+      border: 1px solid #ccc
+    &.open
+      .selecter-selected
+        /*border-radius: 0 0 3px 3px;
+      .selecter-options
+        /*border-radius: 3px 3px 0 0;
+    .cover
+      .selecter-options
+        top: auto
+        bottom: 0
+      &.open
+        .selecter-selected, .selecter-options
+          /*border-radius: 3px;
+  &.multiple .selecter-options
+    width: 100%
+    position: static
+    /*border-width: 1px;
+    display: block
+    /*border-radius: 3px;
+    box-shadow: none
+  &.disabled
+    .selecter-selected
+      background: #ffffff
+      border-color: #cccccc
+      color: #cccccc
+      cursor: default
+    .selecter-options
+      background: #ffffff
+      border-color: #cccccc
+    .selecter-group
+      border-color: #cccccc
+      color: #cccccc
+      cursor: default
+    .selecter-item
+      border-color: #cccccc
+      color: #cccccc
+      cursor: default
+      &.selected
+        background: #fafafa
+
+.no-touch .selecter.disabled .selecter-item.selected:hover
+  background: #fafafa
+
+.selecter.disabled .selecter-item, .no-touch .selecter.disabled .selecter-item:hover
+  color: #cccccc
+  background-color: #ffffff
+
+.selecter-options.scroller
+  overflow: hidden
+  .scroller-content
+    max-height: 260px
+    padding: 0
+
+@media screen and (max-width: 740px)
+  .selecter
+    max-width: 40%
+
+@media screen and (max-width: 500px)
+  .selecter
+    max-width: 100%
