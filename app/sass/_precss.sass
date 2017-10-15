@@ -10,10 +10,54 @@ body
 //standart media
 @media only screen and (max-width: 1920px){}
 @media only screen and (max-width: 1280px){}
-@media only screen and (max-width: 980px){}
-@media only screen and (max-width: 800px){}
-@media only screen and (max-width: 768px){}
+@media only screen and (min-width: 980px)
+    .hamb-menu
+        display: none
+    .nav
+        .row
+            margin-left: 0
+@media only screen and (min-width: 768px) and (max-width: 801px)
+    .nav_nav
+        display: none
+    .nav_search
+        max-width: 100% !important
+        padding: 0 !important
+    .nav
+        .row
+            .col-md3, .col-sm-4
+                flex: 0 0 39%
+                max-width: 36%
+    .nav
+        .row
+            margin-left: 0
+@media only screen and (max-width: 768px)
+    .nav_nav
+        display: none
 @media only screen and (max-width: 360px)
+
+    .nav_search
+        max-width: 100% !important
+        padding: 0 !important
+        margin-left: 0
+    .nav
+        .row
+            margin-left: 0
+    .logo
+        max-width: 60%
+        margin-left: 10%
+    .header_looking_all, .header_bg2
+        margin-top: 60px
+    .header_looking_text
+        margin-top: 30px
+        text-align: center
+    .header_looking_form
+        margin-top: 50px
+    .hamb-menu
+        position: relative
+        max-width: 10%
+    #my-menu
+        position: absolute
+        left: -47px
     .header_looking_form_text
         width: 313px !important
     .header_looking_form_select

@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <div id="wraper">
+        <div class="wraper">
             <div class="nav">
                 <div class="row">
                     <div class="col-md-3 logo"><a href="#"><img src="img/logo.png" alt="duhoot"><span class="logo_text">duhoot</span></a></div>
@@ -26,14 +26,28 @@
                             <li><a href="#">Mobility</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-3 nav_search">
+                    <div class="hamb-menu col-sm-4">
+                        <a href="#" class="hamburger hamburger--spring">
+                            <span class="hamburger-box" onclick="lala()"><span class="hamburger-inner"></span></span>
+                        </a>
+                        <nav id="my-menu">
+                            <ul>
+                                <li><a href="#">Reality</a></li>
+                                <li><a href="#">Living</a></li>
+                                <li><a href="#my-menu">Education</a></li>
+                                <li><a href="#">Entertainment</a></li>
+                                <li><a href="#">Mobility</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-3 col-sm-4 nav_search">
                         <div class="nav_search_lupa"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                         <div class="nav_search_login"><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="login_text">Login</span></a></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="header_looking">
+        <div class="header_looking_all">
             <div class="header_bg"><img src="img/searchbg.png" alt=""></div>
             <div class="header_bg2"><img src="img/searchbg2.png" alt=""></div>
             <div class="header_looking">
@@ -43,7 +57,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-12 selecter sel1">
                                 <div class="arow-down"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-                                <select class=" header_looking_form_select_city" name="city">
+                                <select class="header_looking_form_select_city" name="city">
                                     <option value="barcelona">Dubai</option>
                                     <option value="barcelona">Barcelona</option>
                                     <option value="barcelona">Madrid</option>
@@ -66,12 +80,51 @@
                 </form>
             </div>
         </div>
+        <div class="second_nav wraper">
+            <div class="row">
+                <div class="col-md-4 second_nav_li">
+                    <ul>
+                        <li><a href="#" class="active">recommended</a></li>
+                        <li><a href="#">latest</a></li>
+                        <li><a href="#">highlights</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 second_nav_sel3_map">
+                    <div class="sel3">
+                        <div class="arow-down_map"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                        <select class="second_nav_sel3" name="what">
+                            <option value="barcelona">Dubai</option>
+                            <option value="barcelona">Barcelona</option>
+                            <option value="barcelona">Madrid</option>
+                            <option value="barcelona">Tokio</option>
+                        </select>
+                    </div>
+                    <div class="second_map_hide_icon">
+                        <input type="submit" class="second_nav_map" name="search" value="hide map">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-md-3 filter_icons">filter: icons</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </header>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="js/jquery.fs.selecter.min.js" charset="utf-8"></script>
     <script src="js/modernizr.js" charset="utf-8"></script>
+    <script src="js/m-menu.js" charset="utf-8"></script>
     <script>
         $(document).ready(function() {
             $('select').selecter({
