@@ -316,54 +316,52 @@ li
     height: 266px
     margin-left: 18px
     width: 210px
-.section_post_img
-    background-size: cover
-    // margin-left: 20px
-    max-width: 210px !important
-    .post_price
-        background-color: #1baf5d
-        height: 25px
-        width: 65px
-        border-radius: 50px
-        font-size: 0.75rem
-        font-family: 'gotham medium'
-        color: #fff
-        padding: 4px 10px
-        float: right
-        margin-top: 8px
-        margin-right: 8px
 .post1
+    &:hover
+        filter: blur(2px)
+        box-shadow: inset 0px 0px 0px 195px rgba(214,145,214,0.7)
     background-image: url(../img/post1.png)
     width: 210px  !important
     height: 140px
     border-bottom: 3px solid #1baf5d
+.section_post_img
+    background-size: cover
+    max-width: 210px !important
+    position: relative
+    .post_price_1
+        background-color: #1baf5d
+
+        position: absolute
+        height: 25px
+        width: 65px
+        border-radius: 50px
+        font-size: 0.75rem
+        font-family: 'gotham medium'
+        color: #fff
+        padding: 4px 10px
+        top: 8px
+        right: 0
+        margin-right: 8px
     .post_1_a
         width: 195px
-        height: 135px
         position: relative
         display: flex
         justify-content: center
-        a
-            position: absolute
+        margin-top: 26px
+        .post_1_filter_img
+            +prefilter_img
             bottom: 0
-    .filter_img
-        height: 58px
-        width: 58px
-        background-position: center
-        background-repeat: no-repeat
-        // background-color: #1baf5d
-        border-radius: 50px
-        background-size: 28px
-        border: 3px solid #fff
-    .house
-        background-image: url(../img/Vector01.png)
-        background-color: #1baf5d
-        margin-left: 20px
+            position: absolute
+            left: 40%
+        .house
+            background-image: url(../img/Vector01.png)
+            background-color: #1baf5d
     .post_text
         width: 210px
         height: auto
         text-align: center
         font-family: 'gotham medium'
+        margin-top: 5px
         .text1
             font-size: 0.875rem
             color: #566375
@@ -391,12 +389,20 @@ li
     height: 266px
     margin-left: 18px
     width: 210px
+.post2
+    &:hover
+        box-shadow: inset 0px 0px 0px 195px rgba(214,145,214,0.7)
+    background-image: url(../img/post2.png)
+    width: 210px  !important
+    height: 140px
+    border-bottom: 3px solid #1baf5d
 .section_post_img
     background-size: cover
-    // margin-left: 20px
     max-width: 210px !important
-    .post_price
+    position: relative
+    .post_price_2
         background-color: #1baf5d
+        position: absolute
         height: 25px
         width: 65px
         border-radius: 50px
@@ -404,50 +410,36 @@ li
         font-family: 'gotham medium'
         color: #fff
         padding: 4px 10px
-        float: right
-        margin-top: 8px
+        top: 8px
+        right: 0
         margin-right: 8px
-.post2
-    background-image: url(../img/post2.png)
-    width: 210px
-    height: 140px
     .post_2_a
         width: 195px
-        height: 135px
         position: relative
         display: flex
         justify-content: center
-        a
-            position: absolute
+        margin-top: 26px
+        .post_2_filter_img
+            +prefilter_img
             bottom: 0
-    .filter_img
-        height: 58px
-        width: 58px
-        background-position: center
-        background-repeat: no-repeat
-        // background-color: #1baf5d
-        border-radius: 50px
-        background-size: 28px
-        border: 3px solid #fff
-    .house
-        background-image: url(../img/Vector01.png)
-        background-color: #1baf5d
-        margin-left: 20px
+            position: absolute
+            left: 40%
+        .house
+            background-image: url(../img/Vector04.png)
+            background-color: #f19e1f
     .post_text
         width: 210px
         height: auto
         text-align: center
         font-family: 'gotham medium'
-        .text1
+        .text2
             font-size: 0.875rem
             color: #566375
             margin-left: 8px
             width: 190px
-        .cap
-            font-size: 0.75rem
-            text-transform: uppercase
-            color: #1baf5d
-            margin-top: 15px
+            .cap
+                margin-top: 35px
+                color: #f19e1f
         .stars
             font-size: 0.75rem
             .fa
@@ -465,12 +457,20 @@ li
     height: 266px
     margin-left: 18px
     width: 210px
+.post3
+    &:hover
+        box-shadow: inset 0px 0px 0px 195px rgba(214,145,214,0.7)
+    background-image: url(../img/post1.png)
+    width: 210px  !important
+    height: 140px
+    border-bottom: 3px solid #1baf5d
 .section_post_img
     background-size: cover
-    // margin-left: 20px
     max-width: 210px !important
-    .post_price
+    position: relative
+    .post_price_3
         background-color: #1baf5d
+        position: absolute
         height: 25px
         width: 65px
         border-radius: 50px
@@ -478,50 +478,35 @@ li
         font-family: 'gotham medium'
         color: #fff
         padding: 4px 10px
-        float: right
-        margin-top: 8px
+        top: 8px
+        right: 0
         margin-right: 8px
-.post3
-    background-image: url(../img/post1.png)
-    width: 210px
-    height: 140px
     .post_3_a
         width: 195px
-        height: 135px
         position: relative
         display: flex
         justify-content: center
-        a
-            position: absolute
+        margin-top: 26px
+        .post_3_filter_img
+            +prefilter_img
             bottom: 0
-    .filter_img
-        height: 58px
-        width: 58px
-        background-position: center
-        background-repeat: no-repeat
-        // background-color: #1baf5d
-        border-radius: 50px
-        background-size: 28px
-        border: 3px solid #fff
-    .house
-        background-image: url(../img/Vector01.png)
-        background-color: #1baf5d
-        margin-left: 20px
+            position: absolute
+            left: 40%
+        .bus
+            background-image: url(../img/Vector05.png)
+            background-color: #88499c
     .post_text
         width: 210px
         height: auto
         text-align: center
         font-family: 'gotham medium'
-        .text1
+        .text3
             font-size: 0.875rem
             color: #566375
             margin-left: 8px
             width: 190px
-        .cap
-            font-size: 0.75rem
-            text-transform: uppercase
-            color: #1baf5d
-            margin-top: 15px
+            .cap
+                color: #88499c
         .stars
             font-size: 0.75rem
             .fa
@@ -539,12 +524,20 @@ li
     height: 266px
     margin-left: 18px
     width: 210px
+.post4
+    &:hover
+        box-shadow: inset 0px 0px 0px 195px rgba(214,145,214,0.7)
+    background-image: url(../img/post4.png)
+    width: 210px  !important
+    height: 140px
+    border-bottom: 3px solid #1baf5d
 .section_post_img
     background-size: cover
-    // margin-left: 20px
     max-width: 210px !important
-    .post_price
+    position: relative
+    .post_price_4
         background-color: #1baf5d
+        position: absolute
         height: 25px
         width: 65px
         border-radius: 50px
@@ -552,50 +545,35 @@ li
         font-family: 'gotham medium'
         color: #fff
         padding: 4px 10px
-        float: right
-        margin-top: 8px
+        top: 8px
+        right: 0
         margin-right: 8px
-.post4
-    background-image: url(../img/post4.png)
-    width: 210px
-    height: 140px
     .post_4_a
         width: 195px
-        height: 135px
         position: relative
         display: flex
         justify-content: center
-        a
-            position: absolute
+        margin-top: 26px
+        .post_4_filter_img
+            +prefilter_img
             bottom: 0
-    .filter_img
-        height: 58px
-        width: 58px
-        background-position: center
-        background-repeat: no-repeat
-        // background-color: #1baf5d
-        border-radius: 50px
-        background-size: 28px
-        border: 3px solid #fff
-    .house
-        background-image: url(../img/Vector01.png)
-        background-color: #1baf5d
-        margin-left: 20px
+            position: absolute
+            left: 40%
+        .house
+            background-image: url(../img/Vector01.png)
+            background-color: #1baf5d
     .post_text
         width: 210px
         height: auto
         text-align: center
         font-family: 'gotham medium'
-        .text1
+        .text4
             font-size: 0.875rem
             color: #566375
             margin-left: 8px
             width: 190px
-        .cap
-            font-size: 0.75rem
-            text-transform: uppercase
-            color: #1baf5d
-            margin-top: 15px
+            .cap
+                color: #1baf5d
         .stars
             font-size: 0.75rem
             .fa
@@ -607,3 +585,24 @@ li
                 // border: 1px solid #f19e1f
             .stars_coution
                 color: #96a6a7
+
+//
+// .post_toggle_blur
+
+.post_show_more
+    border-radius: 50px
+    border: 3px solid #fff
+    padding: 5px 18px
+    position: absolute
+    top: 5%
+    left: 16%
+    font-size: 0.75rem
+    font-family: 'gotham medium'
+    text-transform: uppercase
+    color: #fff
+    display: none
+    user-select: none
+    z-index: 5
+    cursor: pointer
+    i
+        margin-right: 10px
