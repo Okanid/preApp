@@ -733,3 +733,80 @@ li
         color: #fff
         right: 17%
         top: 25%
+
+
+.big_posts_row
+    margin: 32px 0 32px 3px !important
+.big_post1
+    height: 270px
+.big_post2
+    height: 270px
+.big_post1_bg
+    background-image: url(/img/bigpost1.png)
+    position: relative
+    &::after
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 20%)
+        content: ""
+        display: block
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+        z-index: 1
+.big_post2_bg
+    position: relative
+    .big_post_bg_cap_stars
+        bottom: 2px
+.big_post_bg_cap_stars
+    display: flex
+    position: absolute
+    bottom: 3px
+    color: #fff
+    left: 22%
+    z-index: 2
+    .big_post_bg_cap
+        text-transform: uppercase
+        font-family: 'gotham medium'
+        font-size: 1.125rem
+    .big_post_bg_stars
+        font-size: 0.75rem
+        margin: 5px 0 0 10px
+        color: $orange
+    .big_post_bg_stars_counter
+        font-size: 0.75rem
+        margin: 4px 0 0 5px
+        font-family: 'gotham medium'
+.big_posts_filter_img
+    +prefilter_img
+    bottom: -24%
+    position: absolute
+    left: 7%
+    z-index: 2
+.big_post2_bg
+    background-image: url(/img/bigpost2.png)
+    .house
+        background-color: #f19e1f !important
+.big_posts_bg
+    background-size: cover
+    width: 455px
+    height: 120px
+    border-bottom: 3px solid #1baf5d
+    .house
+        background-image: url(../img/Vector01.png)
+        background-color: #1baf5d
+.big_post1_text
+    padding-left: 22%
+    padding-top: 3%
+.big_post1_text_wrap
+    background-color: #fff
+    width: 455px
+    height: 147px
+.big_post_text_stars
+    color: $orange
+    font-size: 1.125rem
+.big_post_text_cap
+    font-family: 'gotham medium'
+    text-transform: uppercase
+    color: #566375
+    margin-top: 5px
